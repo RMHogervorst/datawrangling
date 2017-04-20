@@ -14,10 +14,11 @@ In statistics education we focus on basic statistics, probability
 and models. However, our students (and many of us as well)
 have a hard time getting
 their data in their statistical program, reshaping or cleaning it.
-This is an introduction to the tidyverse and some examples of data 
-manipulation that could be trivial, but are often not that simple.
-Modern tools in R "the Tidyverse" is build around the same philosophy
-of rectangular data and consistent tools that work in the same way.
+Modern tools in R (known as "the Tidyverse") are build around the 
+philosophy of 'tidy' data and consist of rectangular data and 
+tooling (packages) that all work in the same way. This is an
+introduction  to the "tidyverse"" and I have some examples of data 
+manipulation that should be trivial, but is often not.
 
 keywords: tidy data, tidyverse, 
 
