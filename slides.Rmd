@@ -1,0 +1,23 @@
+---
+title: "data munging with modern R tools welcome to the tidyverse"
+author: "Roel M. Hogervorst"
+date: "24 april 2017"
+output: 
+    ioslides_presentation:
+    widescreen: true
+    df_print: tibble
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Introduction
+
+*why
+
+
+## Tidyverse
+
+![Packages in the tidyverse](images/tidyverse_overview.PNG)
