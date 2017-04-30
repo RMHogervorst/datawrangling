@@ -2,7 +2,7 @@
 title: "Data munging with modern R tools"
 subtitle: "github.com/RMHogervorst/datawrangling"
 author: "Roel M. Hogervorst"
-date: "24 april 2017"
+date: "1st may 2017"
 output: 
     ioslides_presentation:
     widescreen: true
@@ -22,10 +22,9 @@ Data munging or data wrangling:
 
 Can involve:
 
-- reading from data bases, text files, websites
+- reading from data bases, text files, websites and combining multiple sources
 - enriching data 
 - error correction
-- combining multiple sources
 - cleaning
 - seperating variables
 - recoding
@@ -47,17 +46,26 @@ Can involve:
 from https://speakerdeck.com/jennybc/teach-data-science-and-they-will-come
 
 
-# Inability to work with messy or uncleaned data
+## Inability to work with messy or uncleaned data
 
-## focus {.flexbox .vcenter}
+Other problems:
+
+- Column headers are values, not variable names:  `<$10k` `$10-20k` `$20-30k` `$30-40k` `$40-50k`
+- Multiple variables are stored in one column: `year   m04  m514  m014 m1524 m2534 m3544 m4554 m5564`
+- Variables are stored in both rows and columns `row 1 mean, row 2 sum`
+- Multiple types of observational units are stored in the same table
+- A single observational unit is stored in multiple tables.
+
+<http://tidyr.tidyverse.org/articles/tidy-data.html>
+
+## Change of focus in coursework? {.flexbox .vcenter}
 
 Should we focus more tidying data and data wrangling?
 
-You can't do analysis when you can't use the data.
+You can't do analysis when you can't use, or load the data.
 
-## Data Cleaning
 
-## Data transforming
+## Data Transforming {.flexbox .vcenter}
 
 Very uncomfortable for students, so much that we often just do 
 it for them. 
@@ -66,16 +74,16 @@ it for them.
 
 ## Tidy data:
 
+0. *rectangle your data*.
 1. Each variable must have its own column.
 2. Each observation must have its own row.
 3. Each value must have its own cell.
+
 
 ## Tidyverse
 
 ![Packages in the tidyverse](images/tidyverse_overview.PNG)
 
-
-# Demonstration!
 
 
 
@@ -118,11 +126,15 @@ foo_foo %>%
   bop(on = head)
 ```
 
+# Demonstration!
+
+
+
 ## Conclusion
 
 - if possible, make rectangular 'tidy' data
 - use pipes to make a sequence of steps
-- 
+- keep within the tidyverse
 
 
 ## Final Thoughts
@@ -150,6 +162,8 @@ Find this presentation on github at <https://github.com/rmhogervorst/datawrangli
 
 [Book: Hadley Wickham's R 4 data science (online)](http://r4ds.had.co.nz/)
 
-[chapter from that book about tidy data](http://r4ds.had.co.nz/tidy-data.html "chapter about tidy data")
+[Chapter from that book about tidy data](http://r4ds.had.co.nz/tidy-data.html "chapter about tidy data")
 
 [Tidy data - Wickham 2013](http://dx.doi.org/10.18637/jss.v059.i10)
+
+[code-heavy explanation of tidy data article](http://tidyr.tidyverse.org/articles/tidy-data.html)
